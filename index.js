@@ -12,8 +12,16 @@ const x=["mahika"," ganduka"];
 // JSX ==> React.createElement ==> React element JS Object ==> HTML Element(Rendered)
 
 
+
+const Headingcomponent2= ()=>{ return (<h2> mahika </h2>) };
 // h1 is a React Element 
-const headingElement=<h1> namaste react using jsx {x} </h1>;      //this is JSX not HTML (JSX is HTML like syntax in JS)
+const headingElement= 
+<div>
+<h1> namaste react using jsx {x} </h1>; 
+<Headingcomponent2/> 
+
+
+</div>     //this is JSX not HTML (JSX is HTML like syntax in JS)
 
 
 
@@ -22,14 +30,33 @@ const headingElement=<h1> namaste react using jsx {x} </h1>;      //this is JSX 
 
 
 // React functional component
-const Headingcomponent= ()=>{ return <h2> namaste react using functional component </h2> };
+
+
+
+    
+
+const Headingcomponent= ()=>{
+    return (
+        
+    <div id="xyz">
+       
+       <Headingcomponent2/> 
+      {headingElement}
+      
+       
+       
+<h2> namaste react using functional component </h2> </div>) 
+};
+
+
 
 
 
 
 
 const root=ReactDOM.createRoot(document.getElementById("container"));
-root.render(headingElement);
+root.render(<Headingcomponent/>);
+ 
 
 
 
